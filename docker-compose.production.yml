@@ -16,7 +16,7 @@ services:
     image: zhenyasonic/kittygram_backend
     env_file: .env
     volumes:
-      - static:/static
+      - static:/app/static
       - media:/media
     depends_on:
       - db
@@ -35,7 +35,7 @@ services:
     env_file: .env
     volumes:
       - static:/static
-      - media:/media
+      - media:/app/media
     ports:
       - 9000:80
     depends_on:
