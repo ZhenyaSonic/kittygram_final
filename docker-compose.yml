@@ -26,6 +26,7 @@ services:
     command: cp -r /app/build/. /static/
     volumes:
       - static:/static/
+      - media:/app/media/ 
     depends_on:
       - backend
 
