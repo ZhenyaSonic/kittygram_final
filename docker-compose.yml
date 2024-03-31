@@ -17,7 +17,7 @@ services:
     depends_on:
       - db
     volumes:
-      - static:/app/static
+      - static:/app/static/
       - media:/app/media/
 
   frontend:
@@ -25,7 +25,7 @@ services:
     build: ./frontend/
     command: cp -r /app/build/. /static/
     volumes:
-      - static:/static
+      - static:/static/
     depends_on:
       - backend
 
@@ -35,7 +35,7 @@ services:
     ports:
       - 9000:80
     volumes:
-      - static:/static
+      - static:/static/
       - media:/app/media/
     depends_on:
       - frontend
